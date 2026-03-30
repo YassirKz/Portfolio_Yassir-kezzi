@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './Yassir_kezzi_PortFolio/Navbar';
-import Hero from './Yassir_kezzi_PortFolio/Hero';
-import About from './Yassir_kezzi_PortFolio/About';
-import Skills from './Yassir_kezzi_PortFolio/Skills';
-import Projects from './Yassir_kezzi_PortFolio/Projects';
-import Education from './Yassir_kezzi_PortFolio/Education';
-import Contact from './Yassir_kezzi_PortFolio/Contact';
-import Footer from './Yassir_kezzi_PortFolio/Footer';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Education from './components/Education';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
