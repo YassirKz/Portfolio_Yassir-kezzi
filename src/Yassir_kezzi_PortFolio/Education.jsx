@@ -19,7 +19,7 @@ const educationData = [
   },
 ];
 
-function Education() {
+let Education = () => {
   return (
     <section id="education" className="py-5 bg-light">
       <div className="container">

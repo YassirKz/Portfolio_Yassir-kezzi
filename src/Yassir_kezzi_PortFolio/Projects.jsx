@@ -19,7 +19,7 @@ const projectsData = [
   },
 ];
 
-const Projects = () => {
+let Projects = () => {
   return (
     <section id="projects" className="py-5 bg-white">
       <div className="container">

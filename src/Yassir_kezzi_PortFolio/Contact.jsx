@@ -1,11 +1,4 @@
-function Contact() {
-  // In a real application, you'd handle form submission state here.
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Logic for form submission goes here
-    console.log('Form submitted!');
-  };
-
+let Contact = () => {
   return (
     <section id="contact" className="py-5 bg-primary bg-gradient">
       <div className="container">
@@ -20,7 +13,7 @@ function Contact() {
             </div>
             <div className="col-lg-6">
               <div className="card-body p-5">
-                <form onSubmit={handleSubmit}>
+                <form>
                   <div className="mb-3 position-relative">
                     <i className="bi bi-person position-absolute top-50 start-0 translate-middle-y ms-3"></i>
                     <input type="text" className="form-control ps-5" placeholder="Name" required />

@@ -1,5 +1,5 @@
-
-function Footer() {
+import { Link } from 'react-router-dom';
+let Footer = () => {
   return (
     <footer className="bg-dark text-white py-5">
       <div className="container">
@@ -11,11 +11,31 @@ function Footer() {
           <div className="col-lg-4 mb-4 mb-lg-0">
             <h3 className="fw-bold mb-3">quick links</h3>
             <ul className="list-unstyled">
-              <li className="mb-2"><a href="#home" className="text-white text-decoration-none"><i className="bi bi-chevron-right me-2"></i> home</a></li>
-              <li className="mb-2"><a href="#about" className="text-white text-decoration-none"><i className="bi bi-chevron-right me-2"></i> about</a></li>
-              <li className="mb-2"><a href="#skills" className="text-white text-decoration-none"><i className="bi bi-chevron-right me-2"></i> skills</a></li>
-              <li className="mb-2"><a href="#projects" className="text-white text-decoration-none"><i className="bi bi-chevron-right me-2"></i> Projets</a></li>
-              <li className="mb-2"><a href="#education" className="text-white text-decoration-none"><i className="bi bi-chevron-right me-2"></i> education</a></li>
+              <li className="mb-2">
+                <Link to="/" className="text-white text-decoration-none">
+                  <i className="bi bi-chevron-right me-2"></i> home
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/about" className="text-white text-decoration-none">
+                  <i className="bi bi-chevron-right me-2"></i> about
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/skills" className="text-white text-decoration-none">
+                  <i className="bi bi-chevron-right me-2"></i> skills
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/projects" className="text-white text-decoration-none">
+                  <i className="bi bi-chevron-right me-2"></i> Projects
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/education" className="text-white text-decoration-none">
+                  <i className="bi bi-chevron-right me-2"></i> education
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="col-lg-4 mb-4 mb-lg-0">
@@ -30,9 +50,9 @@ function Footer() {
               <a href="https://github.com/Yassir-kezzi" className="btn btn-outline-light rounded-circle me-2" target="_blank" rel="noopener noreferrer">
                 <i className="bi bi-github"></i>
               </a>
-              <a className="btn btn-outline-light rounded-circle me-2" href="https://youtu.be/YXwURi1PgWM" target="_blank" rel="noopener noreferrer">
+              {/* <a className="btn btn-outline-light rounded-circle me-2" href="https://youtu.be/YXwURi1PgWM" target="_blank" rel="noopener noreferrer">
                 <i className="bi bi-youtube"></i>
-              </a>
+              </a> */}
               <a href="mailto:kezziyassir005@gmail.com" className="btn btn-outline-light rounded-circle">
                 <i className="bi bi-envelope"></i>
               </a>

@@ -16,7 +16,7 @@ const skillsData = [
     
 ];
 
-function Skills() {
+let Skills = () => {
   return (
     <section id="skills" className="py-5 bg-primary bg-gradient">
       <div className="container">

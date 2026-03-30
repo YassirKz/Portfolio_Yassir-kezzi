@@ -1,13 +1,11 @@
+let About = () => {
 
-function About() {
-
-    const calculateAge = () => {
-        const birthDate = new Date(2005, 6, 15); 
-        const today = new Date();
+    let calculateAge = () => {
+        let birthDate = new Date(2005, 6, 15); 
+        let today = new Date();
         let age = today.getFullYear() - birthDate.getFullYear();
-        const monthDiff = today.getMonth() - birthDate.getMonth();
+        let monthDiff = today.getMonth() - birthDate.getMonth();
         
-        // Si l'anniversaire n'est pas encore passé cette année, soustraire 1
         if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
             age--;
         }
@@ -47,7 +45,7 @@ function About() {
                         <p><span className="fw-bold">Age: </span> {calculateAge()}</p>
                     </div>
                     </div>
-                    <a href="Pdf/YASSIR_KEZZI__Lebenslauf_Ausbilldung.pdf" className="btn btn-primary btn-lg px-4">
+                    <a href="/Pdf/CV_Yassir_Kezzi.pdf" target="blank" className="btn btn-primary btn-lg px-4">
                     <span className="fw-bold">Resume</span>
                     </a>
                 </div>
