@@ -1,6 +1,6 @@
 # 🚀 Yassir Kezzi - Full-Stack Developer Portfolio
 
-**[Live Preview](https://portfolio-yassir-kezzi-vercel-app.vercel.app/)** | **[LinkedIn](https://www.linkedin.com/in/yassir-kezzi-530383283/)** | **[GitHub](https://github.com/Yassir-kezzi)**
+**[Live Preview](https://portfolio-yassir-kezzi-vercel-app.vercel.app/)** | **[LinkedIn](https://www.linkedin.com/in/yassir-kezzi-530383283/)** | **[GitHub](https://github.com/Yassirkz)**
 
 Welcome to my personal portfolio! This project showcases my journey as a Full-Stack developer based in Rabat, Morocco. It highlights my skills, projects, and professional background.
 
@@ -38,11 +38,11 @@ I'm **Yassir Kezzi**, a passionate Full-Stack developer and Information Technolo
 
 ## 📂 Featured Projects
 
-### [1. USD ↔ MAD Converter](https://github.com/Yassir-kezzi/USD-MAD-converter)
+### [1. USD ↔ MAD Converter](https://github.com/Yassirkz/USD-MAD-converter)
 A fully responsive currency conversion platform built to provide accurate exchanges between USD and MAD.
 - **Tech:** HTML, CSS, JavaScript, Bootstrap.
 
-### [2. Quiz Academy](https://github.com/Yassir-kezzi/quizAcademy)
+### [2. Quiz Academy](https://github.com/Yassirkz/quizAcademy)
 A dynamic web-based quiz application that loads questions from a database based on the selected topic.
 - **Tech:** PHP, CSS, phpMyAdmin (MySQL).
 
@@ -82,7 +82,7 @@ To run this project locally, follow these steps:
 Feel free to reach out for collaborations or just a friendly chat!
 
 - **LinkedIn:** [Yassir Kezzi](https://www.linkedin.com/in/yassir-kezzi-530383283/)
-- **GitHub:** [@Yassir-kezzi](https://github.com/Yassir-kezzi)
+- **GitHub:** [@Yassir-kezzi](https://github.com/Yassirkz)
 - **Email:** [kezziyassir005@gmail.com](mailto:kezziyassir005@gmail.com)
 
 ---
