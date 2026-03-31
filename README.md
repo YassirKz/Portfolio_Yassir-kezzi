@@ -54,12 +54,12 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Yassir-kezzi/Portfolio_Yassir-kezzi.git
+   git clone https://github.com/YassirKz/Portfolio_Yassir-kezzi.git
    ```
 
 2. **Navigate to the project directory:**
    ```bash
-   cd Portfolio_Yassir
+   cd Portfolio_Yassir-kezzi
    ```
 
 3. **Install dependencies:**
