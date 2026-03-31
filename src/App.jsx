@@ -37,10 +37,12 @@ function App() {
                 <section id="education" className="snap-section">
                   <Education />
                 </section>
-                <section id="contact" className="snap-section">
-                  <Contact />
+                <section id="contact" className="snap-section !h-auto">
+                  <div className="w-full flex flex-col items-center">
+                    <Contact />
+                    <Footer />
+                  </div>
                 </section>
-                <Footer />
               </>
             } />
             <Route path="/about" element={<About />} />

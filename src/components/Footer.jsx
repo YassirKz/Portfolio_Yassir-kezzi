@@ -3,8 +3,15 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToSection('home');
   };
 
   return (
@@ -23,9 +30,9 @@ const Footer = () => {
           <div className="flex flex-col items-center">
             <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
             <div className="flex gap-6">
-              <Link to="/" className="text-slate-400 hover:text-white transition-colors interactive">Home</Link>
-              <Link to="/about" className="text-slate-400 hover:text-white transition-colors interactive">About</Link>
-              <Link to="/projects" className="text-slate-400 hover:text-white transition-colors interactive">Works</Link>
+              <button onClick={() => scrollToSection('home')} className="text-slate-400 hover:text-white transition-colors interactive bg-transparent border-none cursor-pointer">Home</button>
+              <button onClick={() => scrollToSection('about')} className="text-slate-400 hover:text-white transition-colors interactive bg-transparent border-none cursor-pointer">About</button>
+              <button onClick={() => scrollToSection('projects')} className="text-slate-400 hover:text-white transition-colors interactive bg-transparent border-none cursor-pointer">Works</button>
             </div>
           </div>
 
