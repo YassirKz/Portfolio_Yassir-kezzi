@@ -1,71 +1,69 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-let Footer = () => {
+import { motion } from 'framer-motion';
+
+const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <footer className="bg-dark text-white py-5">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-4 mb-4 mb-lg-0">
-            <h3 className="fw-bold mb-3">Yassir's Portfolio</h3>
-            <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br /><br /> Keep Rising 🚀. Connect with me over live chat!</p>
+    <footer className="relative py-12 bg-transparent overflow-hidden border-t border-white/5">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-3 gap-12 items-center text-center md:text-left">
+          <div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              YASSIR<span className="text-primary">.KZ</span>
+            </h3>
+            <p className="text-slate-400 max-w-xs mx-auto md:mx-0">
+              Transforming ideas into digital reality through clean code and modern design.
+            </p>
           </div>
-          <div className="col-lg-4 mb-4 mb-lg-0">
-            <h3 className="fw-bold mb-3">quick links</h3>
-            <ul className="list-unstyled">
-              <li className="mb-2">
-                <Link to="/" className="text-white text-decoration-none">
-                  <i className="bi bi-chevron-right me-2"></i> home
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link to="/about" className="text-white text-decoration-none">
-                  <i className="bi bi-chevron-right me-2"></i> about
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link to="/skills" className="text-white text-decoration-none">
-                  <i className="bi bi-chevron-right me-2"></i> skills
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link to="/projects" className="text-white text-decoration-none">
-                  <i className="bi bi-chevron-right me-2"></i> Projects
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link to="/education" className="text-white text-decoration-none">
-                  <i className="bi bi-chevron-right me-2"></i> education
-                </Link>
-              </li>
-            </ul>
+
+          <div className="flex flex-col items-center">
+            <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
+            <div className="flex gap-6">
+              <Link to="/" className="text-slate-400 hover:text-white transition-colors interactive">Home</Link>
+              <Link to="/about" className="text-slate-400 hover:text-white transition-colors interactive">About</Link>
+              <Link to="/projects" className="text-slate-400 hover:text-white transition-colors interactive">Works</Link>
+            </div>
           </div>
-          <div className="col-lg-4 mb-4 mb-lg-0">
-            <h3 className="fw-bold mb-3">contact info</h3>
-            <p><i className="bi bi-telephone me-2"></i>+212 682486661</p>
-            <p><i className="bi bi-envelope me-2"></i>kezziyassir005@gmail.com</p>
-            <p><i className="bi bi-geo-alt me-2"></i>Rabat , Morocco - 10100</p>
-            <div className="mt-3">
-              <a href="https://www.linkedin.com/in/yassir-kezzi-530383283/" className="btn btn-outline-light rounded-circle me-2" target="_blank" rel="noopener noreferrer">
-                <i className="bi bi-linkedin"></i>
+
+          <div className="flex flex-col items-center md:items-end">
+            <h4 className="text-lg font-bold text-white mb-6">Let's Connect</h4>
+            <div className="flex gap-4">
+              <a href="https://github.com/Yassir-kezzi" className="p-3 rounded-full glass group interactive">
+                <i className="bi bi-github text-slate-400 group-hover:text-white transition-colors text-xl"></i>
               </a>
-              <a href="https://github.com/Yassir-kezzi" className="btn btn-outline-light rounded-circle me-2" target="_blank" rel="noopener noreferrer">
-                <i className="bi bi-github"></i>
+              <a href="https://www.linkedin.com/in/yassir-kezzi-530383283/" className="p-3 rounded-full glass group interactive">
+                <i className="bi bi-linkedin text-slate-400 group-hover:text-white transition-colors text-xl"></i>
               </a>
-              {/* <a className="btn btn-outline-light rounded-circle me-2" href="https://youtu.be/YXwURi1PgWM" target="_blank" rel="noopener noreferrer">
-                <i className="bi bi-youtube"></i>
-              </a> */}
-              <a href="mailto:kezziyassir005@gmail.com" className="btn btn-outline-light rounded-circle">
-                <i className="bi bi-envelope"></i>
+              <a href="mailto:kezziyassir005@gmail.com" className="p-3 rounded-full glass group interactive">
+                <i className="bi bi-envelope text-slate-400 group-hover:text-white transition-colors text-xl"></i>
               </a>
             </div>
           </div>
         </div>
-        <hr className="my-4" />
-        <div className="text-center">
-          <p className="mb-0">Designed with <i className="bi bi-heart-fill text-danger"></i> by <a href="https://www.linkedin.com/in/yassir-kezzi-530383283/" className="text-primary text-decoration-none" rel="noopener noreferrer">Yassir-kezzi</a></p>
+
+        <hr className="my-10 border-white/5" />
+
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-slate-500 text-sm flex items-center gap-2">
+            Crafted with <i className="bi bi-heart-fill text-rose-500 mx-1"></i> by Yassir Kezzi
+          </p>
+          <p className="text-slate-600 text-sm">
+            © {new Date().getFullYear()} All rights reserved.
+          </p>
+          <button 
+            onClick={scrollToTop}
+            className="p-3 rounded-full glass group hover:bg-primary transition-all interactive"
+          >
+            <i className="bi bi-arrow-up text-slate-400 group-hover:text-white"></i>
+          </button>
         </div>
       </div>
     </footer>
   );
-}
+};
 
-export default Footer;
+export default Footer;

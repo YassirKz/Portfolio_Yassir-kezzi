@@ -1,38 +1,96 @@
-import { Link } from 'react-router-dom';
-let Hero = () => {
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const Hero = () => {
   return (
-    <section id="home" className="d-flex align-items-center min-vh-100 py-5">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-6 order-lg-1 order-2">
-            <h1 className="display-6 fw-bold mb-3">
-              Hi There,<br /> I'm Yassir <span className="text-primary">Kezzi</span>
-            </h1>
-            <p className="fs-3 mb-4">
-              I'm a <span className="text-primary fw-bold">Full-Stack developer</span>
-            </p>
-            <Link to="/about" className="btn btn-primary btn-lg px-4 py-3 mb-5">
-              <span className="fw-bold me-2">About Me</span>
-              <i className="bi bi-arrow-down-circle"></i>
-            </Link>
-            <div className="social-icons mt-5">
-              <a className="btn btn-dark rounded-circle me-2" href="https://www.linkedin.com/in/yassir-kezzi-530383283/" target="_blank" >
-                <i className="bi bi-linkedin"></i>
-              </a>
-              <a className="btn btn-dark rounded-circle me-2" href="https://github.com/Yassir-kezzi" target="_blank" >
-                <i className="bi bi-github"></i>
-              </a>
-              {/* <a className="btn btn-dark rounded-circle" href="https://youtu.be/YXwURi1PgWM" target="_blank" > */}
-                {/* <i className="bi bi-youtube"></i> */}
-              {/* </a> */}
-            </div>
-          </div>
-          <div className="col-lg-6 order-lg-2 order-1 text-center mb-5 mb-lg-0">
-            <img src="/images/OFF-img.png" className="img-fluid rounded-circle shadow" alt="Yassir's image" />
-          </div>
+    <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <motion.span 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6 border border-primary/20"
+        >
+          Available for Hire
+        </motion.span>
+        
+        <h1 className="heading-xl mb-6">
+          Hi, I'm <br />
+          <span className="text-gradient">Yassir Kezzi</span>
+        </h1>
+        
+        <p className="text-xl text-slate-400 mb-8 max-w-lg leading-relaxed">
+          A passionate <span className="text-white font-semibold">Full-Stack Developer</span> crafting digital experiences that are as beautiful as they are functional.
+        </p>
+
+        <div className="flex flex-wrap gap-4 mb-12">
+          <a href="#projects" className="btn-premium btn-premium-primary interactive">
+            View My Work <i className="bi bi-arrow-right ms-2"></i>
+          </a>
+          <button className="btn-premium btn-premium-outline interactive">
+            Download CV <i className="bi bi-download ms-2"></i>
+          </button>
         </div>
-      </div>
-    </section>
+
+        <div className="flex items-center gap-6">
+          <a 
+            href="https://github.com/Yassirkz" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-slate-400 hover:text-white transition-colors interactive"
+          >
+            <i className="bi bi-github text-2xl"></i>
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/yassir-kezzi-530383283/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-slate-400 hover:text-white transition-colors interactive"
+          >
+            <i className="bi bi-linkedin text-2xl"></i>
+          </a>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="relative flex justify-center"
+      >
+        {/* Glow effect behind image */}
+        <div className="absolute inset-0 bg-primary/20 rounded-full blur-[100px] animate-pulse" />
+        
+        <motion.div
+          animate={{
+            y: [0, -20, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="relative z-10"
+        >
+          <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
+            <img 
+              src="/images/OFF-img.png" 
+              alt="Yassir Kezzi" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          {/* Floating tech icons or badges can be added here */}
+          <div className="absolute -bottom-4 -right-4 glass p-4 rounded-2xl shadow-xl border border-white/10 animate-bounce">
+            <span className="text-2xl">🚀</span>
+          </div>
+        </motion.div>
+      </motion.div>
+    </div>
   );
 };
 
